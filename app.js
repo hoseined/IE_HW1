@@ -30,7 +30,7 @@ app.listen(3000, () => {
             }
         }
         res.send(result);
-    })
+    });
 
     app.put('/gis/addpolygon/', (req, res, next) => {
         local_database['features'].push(req.body);
@@ -41,11 +41,11 @@ app.listen(3000, () => {
             else{
             console.log("data saved to 'database'.")
             }
-        })
+        });
         res.send(local_database);
-    })
+    });
   
     app.get('/test/', (req, res, next) => {
         res.send("test_deploy")
-    })
-})
+    });
+});
