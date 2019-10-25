@@ -1,0 +1,16 @@
+config:
+  target: 'https://rocky-waters-48383.herokuapp.com'
+  phases:
+    - duration: 60
+      arrivalRate: 20
+  defaults:
+    # headers:
+    #   x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+    - get:
+        url: "/gis/testpoint/-299.53125/38.272688535980976/"
+    - put:
+        url: '/gis/addpolygon/'
+        json:
+          {'geometry': {'type': 'Point'}}
