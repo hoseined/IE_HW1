@@ -10,7 +10,7 @@ The put api also writes to the local database which is in the project directory.
 
 The put api accepts only one polygon data per request.
 
-Because of the write file function the server can't handle more than 2 request per second w.o request drop.
+## artillery load test results.
 ```
 artillery run artillery_test.yml
 
