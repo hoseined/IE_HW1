@@ -17,7 +17,8 @@ fs.readFile(path.resolve(__dirname, temp_name_db), 'UTF-8', (err, data) => {
     }
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
+    console.log('server is running on port 3000')
     app.get('/gis/testpoint/:lat/:lon/', (req, res, next) => {
         var coordinates = [parseFloat(req.params.lat, 10), parseFloat(req.params.lon, 10)]
         var result = { 'polygons': []}
