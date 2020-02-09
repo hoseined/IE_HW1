@@ -1,7 +1,7 @@
 config:
-  target: 'https://rocky-waters-48383.herokuapp.com'
+  target: 'https://pacific-crag-66541.herokuapp.com'
   phases:
-    - duration: 60
+    - duration: 6
       arrivalRate: 20
   defaults:
     # headers:
@@ -9,8 +9,8 @@ config:
 scenarios:
   - flow:
     - get:
-        url: "/gis/testpoint/-299.53125/38.272688535980976/"
+        url: "/gis/testpoint/?x=-299.53125&y=38.272688535980976/"
     - put:
         url: '/gis/addpolygon/'
         json:
-          {'geometry': {'type': 'Point'}}
+          {'geometry': {'type': 'Polygon', 'coordinates': [[5, 6], [7, 8], [9, 10]]}}
